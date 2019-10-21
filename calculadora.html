@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="estilos.css" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <center>
+        <form class="contenedor" name="f1">
+            <table class="flex-container">
+                <tr>
+                    <td colspan="5" class="pantalla">
+                        <input class="text ajus_pantalla" type="text" name="txtcaja1">
+                        <br>
+                        <input class="text ajus_pantalla" type="text" name="txtcaja2" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input class="botones texto AC" type="button" value="AC" onClick="document.f1.reset(); blocdel = false;"></td>
+                    <td><input class="botones texto borrar" type="button" onClick="deletecarac()" value=""> </td>
+                    <td><input class="botones texto division" type="button" value="%" onClick="arit('%')"></td>
+                    <td><input class="botones texto division fondo_azul" type="button" value="÷" onClick="arit('/')"></td>
+                </tr>
+                <tr>
+                    <td><input class="botones texto" type="button" value="1" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto" type="button" value="2" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto" type="button" value="3" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto division fondo_azul x" type="button" value="x"  onClick="arit('*')"></td>
+                </tr>
+                <tr>
+                    <td><input class="botones texto" type="button" value="4" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto" type="button" value="5" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto" type="button" value="6" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto division fondo_azul" type="button" value="-"  onClick="arit('-')"></td>
+                </tr>
+                <tr>
+                    <td><input class="botones texto" type="button" value="7" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto" type="button" value="8" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto" type="button" value="9" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto division fondo_azul" type="button" value="+" o onClick="arit('+')"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="boton_cero texto" type="button" value="0" onClick="escribir(this.value)"></td>
+                    <td><input class="botones texto" type="button" value="," onClick="escribir('.')"></td>
+                    <td><input class="botones texto division fondo_azul" type="button" value="=" onclick="calcular()"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+  </body>
+</html>
